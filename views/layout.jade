@@ -1,0 +1,16 @@
+doctype html
+html(ng-app='foodArtTravelApp')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet' href='http://fonts.googleapis.com/css?family=Montserrat|Muli')
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-resource.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-cookies.js')
+    script(src='/javascripts/app.js')
+    script(src='/javascripts/controllers.js')
+    script(src='/javascripts/services.js')
+  body
+    block content

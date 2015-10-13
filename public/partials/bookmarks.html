@@ -1,0 +1,32 @@
+<div id="content-wrapper"  class="group">
+
+  <div class="content-left">
+      <div class="results" ng-init="showData === true" ng-show="showData === true">
+        <h1>Bookmarks you saved</h1>
+        <ul class="bookmark-results clb">
+
+          <li ng-repeat="bookmark in bookmarkList" class="bookmark-result">
+            <div class="bookmark-result-title">
+                <a href="{{bookmark.url}}" target="_blank">{{bookmark.title}}</a>
+            </div>
+            <div class="bookmark-result-attribution">
+                {{bookmark.domain}}</a>
+            </div>
+
+            <div class="bookmark-result-data">
+               <ul class="tag-results">
+                  <li ng-repeat="tag in bookmark.tags" class="tag-result">
+                      <span><a href="/#/bookmarks/{{tag}}" target="_blank">{{tag}}</a></span>
+                  </li>
+              </ul>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+</div>
+<div class="right-sidebar">
+
+
+</div>
+</div>

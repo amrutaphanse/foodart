@@ -1,0 +1,72 @@
+
+<div class="banner-small group">
+  <div class="banner-inner">
+      <section class="banner-form-sm">
+        <form name="resform" id="resform" ng-submit="submit()">
+
+             <div class="form-ele-fl mb15">
+               <legend class="inline">What food do you want to eat today?</legend>
+                <input type="text" placeholder="Cuisine Type" ng-model="category" size=50 required class="input-sm"/>
+             </div>
+
+
+             <div class="form-ele-fl mb15">
+               <legend class="inline">In Particular What Dish</legend>
+                <input type="text" placeholder="Dish" ng-model="dish" size=50 required class="input-sm"/>
+             </div>
+
+              <div class="form-ele-btn" style="clear:both;">
+                   <button type="submit" class="button calltoaction">Submit</button>
+              </div>
+              <div class="clb"></div>
+        </form>
+    </section>
+    </div>
+</div>
+<div class="secondary-nav">
+    <ul class="secnav-links">
+      <li>
+        <a href="#/blog" class="sec-nav-link">Blog</a>
+      </li>
+      <li>
+        <a href="#/bookmarks" class="sec-nav-link">Bookmarks</a>
+      </li>
+    </ul>
+</div>
+<div id="content-wrapper"  class="group">
+
+  <div class="content-left">
+      <div class="results" ng-init="showData === true" ng-show="showData === true">
+        <h1>Restaurant suggestions for You</h1>
+        <img src="/images/fsquare_large.png" class="results-attribution"></img>
+        <ul class="restaurant-results">
+
+          <li ng-repeat="restaurant in restaurantList" class="restaurant-result">
+            <div class="restaurant-result-img">
+                {{restaurant.venue.name}}
+            </div>
+            <div>
+            <div class="restaurant-result-data">
+                <p class="restaurant-name">{{restaurant.venue.name}}</p>
+                <p class="restaurant-meta">{{restaurant.venue.location.address}}, {{restaurant.venue.location.city}}</p>
+                <p class="restaurant-tip">{{restaurant.tips[0].text}}..<a href="https://foursquare.com/v/{{restaurant.venue.id}}" target="_blank">More &raquo;&raquo;</a></p>
+            </div>
+          </div>
+          </li>
+        </ul>
+      </div>
+</div>
+<div class="right-sidebar">
+  <div class="sidebar-thin" ng-show="showData === true" ng-init="showData === true">
+    <h1><img src="/images/trend.png" class="trends-ico"></img> Trending near You</h1>
+    <img src="/images/fsquare_icon.png" class="trends-attribution"></img>
+    <div class="clb"></div>
+    <ul class="trend-results group">
+        <li ng-repeat="trend in trendsList" class="trend-result">
+          <a href="https://foursquare.com/v/{{trend.id}}" target="_blank" class="trend-result">{{trend.name}}</a>
+        </li>
+    </ul>
+  </div>
+
+</div>
+</div>

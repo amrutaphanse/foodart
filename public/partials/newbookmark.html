@@ -1,0 +1,34 @@
+<section class="only-form">
+  <h1>Add a new Bookmark</h1>
+  <form name="bookmarkform" id="bookform" ng-submit="submit()">
+       <legend>Bookmark Title</legend>
+       <div class="form-ele mb15">
+          <input type="text" placeholder="Title" ng-model="bookmark.title" size=150 required class="input-med"/>
+       </div>
+
+       <legend>Bookmark Url</legend>
+       <div class="form-ele mb15">
+          <input type="text" placeholder="Url" ng-model="bookmark.url" size=150 required class="input-med"/>
+       </div>
+
+       <legend>Tags</legend>
+       <div class="form-ele mb15">
+          <input type="text" placeholder="Tags Comma Separated" ng-model="bookmark.tags" size=150 required class="input-med"/>
+       </div>
+
+       <legend>Tags for Bookmark to appear in search</legend>
+       <div class="form-ele mb15">
+          <input type="text" placeholder="Search Tags Comma Separated" ng-model="bookmark.search_tags" size=150 required class="input-med"/>
+       </div>
+
+       <legend>Make the bookmark public or keep private</legend>
+       <div class="form-ele mb15">
+          <input type="text" placeholder="true or false" ng-model="bookmark.isPublic" size=50 required class="input-sm"/>
+       </div>
+
+        <div class="form-ele" style="clear:both;">
+             <button type="submit" class="button calltoaction">Submit</button>
+        </div>
+        <div class="clb"></div>
+  </form>
+</section>
